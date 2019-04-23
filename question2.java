@@ -16,6 +16,19 @@ public class question2 {
         System.out.println(myTree1);
         System.out.println(myTree2);
 
+        System.out.println(union(myTree1, myTree2));
+    }
+
+
+    protected static TreeSet<Character> union(TreeSet treeSet1, TreeSet treeSet2) {
+        TreeSet<Character> unionTree = new TreeSet<Character>();
+        unionTree.addAll(treeSet1);
+
+        for (Object character : treeSet2) {
+            if (!treeSet1.contains(character))
+                unionTree.add((Character) character);
+        }
+        return unionTree;
     }
 
 }
