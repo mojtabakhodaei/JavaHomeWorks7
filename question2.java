@@ -17,6 +17,8 @@ public class question2 {
         System.out.println(myTree2);
 
         System.out.println(union(myTree1, myTree2));
+        System.out.println(intersection(myTree1, myTree2));
+
     }
 
 
@@ -31,4 +33,13 @@ public class question2 {
         return unionTree;
     }
 
+    protected static TreeSet<Character> intersection(TreeSet treeSet1, TreeSet treeSet2) {
+        TreeSet<Character> intersectionTree = new TreeSet<Character>();
+
+        for (Object character: treeSet2){
+            if(treeSet1.contains(character))
+                intersectionTree.add((Character) character);
+        }
+        return intersectionTree;
+    }
 }
